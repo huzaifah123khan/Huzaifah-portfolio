@@ -74,8 +74,10 @@ const Index = () => {
     return () => window.removeEventListener("keydown", onKey);
   }, [page, go, total]);
 
-  // Wheel navigation (desktop) — debounced
+  // Wheel navigation (desktop only) — debounced
   useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (window.matchMedia("(max-width: 768px)").matches) return;
     let lock = false;
     const onWheel = (e: WheelEvent) => {
       // Allow scroll inside scrollable inner panes
