@@ -65,7 +65,7 @@
 
 @layer base {
   * {
-    @apply border-border/10;
+    border-color: hsl(var(--border) / 0.1);
   }
 
   html, body, #root {
@@ -128,7 +128,8 @@
   }
 
   .frame-row {
-    @apply flex items-center justify-between border-t border-white/8 px-6 py-6 transition-colors duration-300;
+    @apply flex items-center justify-between px-6 py-6 transition-colors duration-300;
+    border-top: 1px solid hsl(0 0% 100% / 0.08);
   }
   .frame-row:hover {
     background: hsl(var(--frame-elevated));
