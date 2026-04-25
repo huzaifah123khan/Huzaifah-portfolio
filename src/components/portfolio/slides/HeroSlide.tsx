@@ -1,4 +1,4 @@
-import MetaRow from "./MetaRow";
+import MetaRow from "../MetaRow";
 
 const HeroSlide = () => {
   return (
