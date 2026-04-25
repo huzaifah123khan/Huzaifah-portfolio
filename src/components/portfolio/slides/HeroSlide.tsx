@@ -20,9 +20,9 @@ const HeroSlide = () => {
         }}
       />
 
-      <div className="relative z-10 flex h-full flex-col justify-end px-6 pb-24 pt-28 md:px-14 md:pb-20 md:pt-32">
-        <div className="mb-12 max-w-5xl">
-          <h1 className="font-display font-extrabold uppercase leading-[0.9] tracking-[-0.03em] text-white text-4xl">
+      <div className="relative z-10 flex h-full min-h-full flex-col justify-end overflow-y-auto px-5 pb-20 pt-24 sm:px-6 sm:pb-24 sm:pt-28 md:px-14 md:pb-20 md:pt-32">
+        <div className="mb-8 max-w-5xl sm:mb-12">
+          <h1 className="font-display font-extrabold uppercase leading-[0.9] tracking-[-0.03em] text-white text-4xl sm:text-5xl md:text-7xl lg:text-8xl">
             Cybersecurity
             <br />
             &amp; OSINT
