@@ -22,7 +22,7 @@ const HeroSlide = () => {
 
       <div className="relative z-10 flex h-full flex-col justify-end px-6 pb-24 pt-28 md:px-14 md:pb-20 md:pt-32">
         <div className="mb-12 max-w-5xl">
-          <h1 className="font-display text-[clamp(3.5rem,9vw,8rem)] font-extrabold uppercase leading-[0.9] tracking-[-0.03em] text-white">
+          <h1 className="font-display font-extrabold uppercase leading-[0.9] tracking-[-0.03em] text-white text-4xl">
             Cybersecurity
             <br />
             &amp; OSINT
