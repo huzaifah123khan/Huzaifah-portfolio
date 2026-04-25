@@ -14,7 +14,7 @@ const AboutSlide = () => {
       </div>
 
       {/* Right */}
-      <div className="flex flex-col justify-between border-t md:border-l md:border-t-0 px-6 pb-10 pt-12 md:px-14 md:pt-32"
+      <div className="flex flex-col justify-between border-t md:border-l md:border-t-0 px-5 pb-10 pt-10 sm:px-6 sm:pt-12 md:px-14 md:pt-32 md:overflow-y-auto"
         style={{ borderColor: "hsl(0 0% 100% / 0.08)" }}
       >
         <div className="grid grid-cols-2 gap-x-8 gap-y-12">
