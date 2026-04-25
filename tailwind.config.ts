@@ -57,6 +57,10 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        frame: {
+          DEFAULT: "hsl(var(--frame))",
+          elevated: "hsl(var(--frame-elevated))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -69,12 +73,6 @@ export default {
       },
       borderWidth: {
         '1': '1px',
-      },
-      colors: {
-        frame: {
-          DEFAULT: "hsl(var(--frame))",
-          elevated: "hsl(var(--frame-elevated))",
-        },
       },
       keyframes: {
         "accordion-down": {
