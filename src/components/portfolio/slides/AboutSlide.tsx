@@ -6,7 +6,7 @@ const AboutSlide = () => {
         style={{ background: "radial-gradient(100% 80% at 30% 70%, hsl(0 0% 14%) 0%, hsl(240 4% 7%) 70%)" }}
       >
         <div className="label-mono mb-6">About</div>
-        <h2 className="font-display text-4xl font-extrabold uppercase leading-[0.9] tracking-[-0.03em] text-white">
+        <h2 className="font-display font-extrabold uppercase leading-[0.9] tracking-[-0.03em] text-white text-4xl">
           Threat
           <br />
           Hunter.
