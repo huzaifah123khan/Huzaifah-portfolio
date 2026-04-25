@@ -1,12 +1,12 @@
 const AboutSlide = () => {
   return (
-    <div className="relative grid h-full w-full grid-cols-1 md:grid-cols-2">
+    <div className="relative grid h-full min-h-full w-full grid-cols-1 overflow-y-auto md:grid-cols-2 md:overflow-hidden">
       {/* Left */}
-      <div className="relative flex flex-col justify-end overflow-hidden px-6 pb-12 pt-28 md:px-14 md:pb-20 md:pt-32"
+      <div className="relative flex flex-col justify-end overflow-hidden px-5 pb-10 pt-24 sm:px-6 sm:pb-12 sm:pt-28 md:px-14 md:pb-20 md:pt-32"
         style={{ background: "radial-gradient(100% 80% at 30% 70%, hsl(0 0% 14%) 0%, hsl(240 4% 7%) 70%)" }}
       >
         <div className="label-mono mb-6">About</div>
-        <h2 className="font-display font-extrabold uppercase leading-[0.9] tracking-[-0.03em] text-white text-4xl">
+        <h2 className="font-display font-extrabold uppercase leading-[0.9] tracking-[-0.03em] text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
           Threat
           <br />
           Hunter.
