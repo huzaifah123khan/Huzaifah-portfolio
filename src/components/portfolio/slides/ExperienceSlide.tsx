@@ -21,9 +21,9 @@ const roles = [
 
 const ExperienceSlide = () => {
   return (
-    <div className="relative h-full w-full overflow-y-auto px-6 pb-12 pt-28 md:px-14 md:pt-28">
+    <div className="relative h-full min-h-full w-full overflow-y-auto px-5 pb-12 pt-24 sm:px-6 sm:pt-28 md:px-14 md:pt-28">
       <div className="label-mono mb-4">Experience</div>
-      <h2 className="mb-10 font-display text-[clamp(3rem,7vw,6rem)] font-extrabold uppercase leading-[0.9] tracking-[-0.03em] text-white md:mb-14">
+      <h2 className="mb-8 font-display text-4xl font-extrabold uppercase leading-[0.9] tracking-[-0.03em] text-white sm:text-5xl md:mb-14 md:text-[clamp(3rem,7vw,6rem)]">
         Where I&apos;ve Worked.
       </h2>
 
