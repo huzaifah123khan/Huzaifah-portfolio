@@ -1,9 +1,9 @@
 const ContactSlide = () => {
   return (
-    <div className="relative flex h-full w-full flex-col px-6 pb-8 pt-28 md:px-14 md:pt-32">
+    <div className="relative flex h-full min-h-full w-full flex-col overflow-y-auto px-5 pb-8 pt-24 sm:px-6 sm:pt-28 md:px-14 md:pt-32">
       <div className="flex flex-1 flex-col items-center justify-center text-center">
         <div className="label-mono mb-6">Get in Touch</div>
-        <h2 className="font-display text-[clamp(3.5rem,9vw,7.5rem)] font-extrabold uppercase leading-[0.9] tracking-[-0.03em] text-white">
+        <h2 className="font-display text-4xl font-extrabold uppercase leading-[0.9] tracking-[-0.03em] text-white sm:text-6xl md:text-[clamp(3.5rem,9vw,7.5rem)]">
           Let&apos;s Work
           <br />
           Together.
@@ -11,9 +11,9 @@ const ContactSlide = () => {
 
         <a
           href="mailto:naeemhuzaifah0@gmail.com"
-          className="group mt-12 inline-flex items-center gap-3 rounded-full border border-white/20 px-8 py-5 font-mono text-[13px] uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:bg-white hover:text-background"
+          className="group mt-10 inline-flex max-w-full items-center gap-3 rounded-full border border-white/20 px-5 py-4 font-mono text-[10px] uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:bg-white hover:text-background sm:mt-12 sm:px-8 sm:py-5 sm:text-[13px]"
         >
-          naeemhuzaifah0@gmail.com
+          <span className="truncate">naeemhuzaifah0@gmail.com</span>
           <span className="transition-transform group-hover:translate-x-1">→</span>
         </a>
 
