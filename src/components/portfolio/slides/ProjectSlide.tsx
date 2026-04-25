@@ -28,14 +28,14 @@ const ProjectSlide = ({ title, year, client, type, description, tags, bgHue = 24
         }}
       />
 
-      <div className="relative z-10 flex h-full flex-col justify-end px-6 pb-24 pt-28 md:px-14 md:pb-20 md:pt-32">
-        <div className="mb-8 flex flex-wrap gap-2">
+      <div className="relative z-10 flex h-full min-h-full flex-col justify-end overflow-y-auto px-5 pb-20 pt-24 sm:px-6 sm:pb-24 sm:pt-28 md:px-14 md:pb-20 md:pt-32">
+        <div className="mb-6 flex flex-wrap gap-2 sm:mb-8">
           {tags.map((t) => (
             <span key={t} className="tag-pill">{t}</span>
           ))}
         </div>
 
-        <h1 className="mb-12 font-display text-[clamp(3rem,8vw,7rem)] font-extrabold uppercase leading-[0.9] tracking-[-0.03em] text-white">
+        <h1 className="mb-8 font-display text-[2.5rem] font-extrabold uppercase leading-[0.9] tracking-[-0.03em] text-white sm:text-[3.5rem] md:mb-12 md:text-[clamp(3rem,8vw,7rem)]">
           {title}
         </h1>
 
