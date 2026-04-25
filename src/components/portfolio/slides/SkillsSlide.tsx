@@ -28,16 +28,16 @@ const services = [
 
 const SkillsSlide = () => {
   return (
-    <div className="relative grid h-full w-full grid-cols-1 md:grid-cols-12">
-      <div className="flex flex-col justify-end px-6 pb-10 pt-28 md:col-span-5 md:px-14 md:pb-20 md:pt-32">
+    <div className="relative grid h-full min-h-full w-full grid-cols-1 overflow-y-auto md:grid-cols-12 md:overflow-hidden">
+      <div className="flex flex-col justify-end px-5 pb-8 pt-24 sm:px-6 sm:pb-10 sm:pt-28 md:col-span-5 md:px-14 md:pb-20 md:pt-32">
         <div className="label-mono mb-6">Services</div>
-        <h2 className="font-display text-[clamp(3rem,7vw,6rem)] font-extrabold uppercase leading-[0.9] tracking-[-0.03em] text-white">
+        <h2 className="font-display font-extrabold uppercase leading-[0.9] tracking-[-0.03em] text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
           What
           <br />I Do.
         </h2>
       </div>
 
-      <div className="flex flex-col justify-center px-6 pb-12 pt-8 md:col-span-7 md:px-14 md:pt-32 md:pb-12">
+      <div className="flex flex-col justify-center px-5 pb-12 pt-6 sm:px-6 sm:pt-8 md:col-span-7 md:px-14 md:pt-32 md:pb-12 md:overflow-y-auto">
         <div className="flex flex-col">
           {services.map((s) => (
             <div key={s.n} className="group grid grid-cols-[40px_1fr] items-baseline gap-4 border-t px-2 py-5 transition-colors duration-300 hover:bg-frame-elevated md:py-6"
