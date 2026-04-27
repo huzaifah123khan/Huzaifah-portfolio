@@ -1,64 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Bora-Bora inspired monochrome cinematic portfolio
-   All colors HSL. Strictly white / grey / charcoal.
+/* Monochrome editorial portfolio
+   Strict black / white / opacity. No accent colors.
 */
 
 @layer base {
   :root {
-    /* Outer page */
-    --background: 240 4% 11%;        /* #1c1c1e */
-    --foreground: 0 0% 100%;         /* #ffffff */
-
-    /* Inner frame */
-    --frame: 240 4% 10%;             /* #1a1a1c */
-    --frame-elevated: 240 4% 14%;    /* #2a2a2e */
-    --frame-border: 0 0% 100%;       /* used with /12 alpha */
-
-    /* Text scale */
-    --text-primary: 0 0% 100%;       /* #fff */
-    --text-label: 0 0% 53%;          /* #888 */
-    --text-muted: 0 0% 33%;          /* #555 */
-    --text-faint: 0 0% 27%;          /* #444 */
-    --text-dim: 0 0% 40%;            /* #666 */
-
-    /* shadcn aliases mapped to monochrome */
-    --card: 240 4% 10%;
+    --background: 0 0% 6%;             /* #0f0f0f */
+    --foreground: 0 0% 100%;
+    --card: 0 0% 7%;
     --card-foreground: 0 0% 100%;
-    --popover: 240 4% 10%;
+    --popover: 0 0% 7%;
     --popover-foreground: 0 0% 100%;
     --primary: 0 0% 100%;
-    --primary-foreground: 240 4% 11%;
-    --secondary: 240 4% 14%;
+    --primary-foreground: 0 0% 6%;
+    --secondary: 0 0% 12%;
     --secondary-foreground: 0 0% 100%;
-    --muted: 240 4% 14%;
+    --muted: 0 0% 12%;
     --muted-foreground: 0 0% 53%;
-    --accent: 240 4% 14%;
+    --accent: 0 0% 12%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 100%;
     --border: 0 0% 100%;
-    --input: 240 4% 14%;
+    --input: 0 0% 12%;
     --ring: 0 0% 100%;
     --radius: 0.75rem;
 
-    --sidebar-background: 240 4% 10%;
+    --sidebar-background: 0 0% 7%;
     --sidebar-foreground: 0 0% 100%;
     --sidebar-primary: 0 0% 100%;
-    --sidebar-primary-foreground: 240 4% 11%;
-    --sidebar-accent: 240 4% 14%;
+    --sidebar-primary-foreground: 0 0% 6%;
+    --sidebar-accent: 0 0% 12%;
     --sidebar-accent-foreground: 0 0% 100%;
     --sidebar-border: 0 0% 100%;
     --sidebar-ring: 0 0% 100%;
   }
 
   .dark {
-    /* Same monochrome — site is always dark */
-    --background: 240 4% 11%;
+    --background: 0 0% 6%;
     --foreground: 0 0% 100%;
   }
 }
@@ -68,76 +52,43 @@
     border-color: hsl(var(--border) / 0.1);
   }
 
-  html, body, #root {
-    height: 100%;
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Space Mono', monospace;
+    font-family: 'Inter', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
-    overflow: hidden;
+    text-rendering: optimizeLegibility;
   }
 
-  /* Hide native cursor on desktop only — replaced by custom cursor */
-  @media (hover: hover) and (pointer: fine) {
-    body, a, button {
-      cursor: none;
-    }
+  section[id] {
+    scroll-margin-top: 1.5rem;
+  }
+
+  ::selection {
+    background: #ffffff;
+    color: #000000;
   }
 }
 
 @layer components {
-  .font-display {
-    font-family: 'Syne', sans-serif;
-    letter-spacing: -0.02em;
+  .font-serif-italic {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
   }
-  .font-mono {
-    font-family: 'Space Mono', monospace;
-  }
-
-  .label-mono {
-    font-family: 'Space Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: hsl(var(--text-muted));
-  }
-  .value-mono {
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: hsl(var(--foreground));
-    font-weight: 700;
-    line-height: 1.5;
-  }
-  .nav-mono {
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: hsl(var(--text-label));
-    transition: color 0.25s ease;
-  }
-  .nav-mono:hover { color: hsl(var(--foreground)); }
-
-  .tag-pill {
-    @apply inline-flex items-center px-3 py-1 rounded-full border border-white/15 text-[9px] tracking-[0.18em] uppercase text-white/70;
-    font-family: 'Space Mono', monospace;
+  .font-serif {
+    font-family: 'Instrument Serif', serif;
   }
 
-  .frame-row {
-    @apply flex items-center justify-between px-6 py-6 transition-colors duration-300;
-    border-top: 1px solid hsl(0 0% 100% / 0.08);
+  /* Cinematic grayscale treatment for all imagery */
+  .grayscale-cinematic {
+    filter: grayscale(100%) contrast(1.05) brightness(0.95);
   }
-  .frame-row:hover {
-    background: hsl(var(--frame-elevated));
-  }
-}
 
-/* Mobile fallback — allow scrolling */
-@media (max-width: 768px) {
-  body { overflow: auto; cursor: auto !important; }
-  body * { cursor: auto !important; }
+  /* Editorial label: tiny, uppercase, wide tracking */
+  .label-eyebrow {
+    @apply text-xs uppercase tracking-[0.2em] text-white/40;
+  }
 }
